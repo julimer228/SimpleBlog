@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Simple blog web application</title>
+ 
+        <script type="text/javascript" src="js/ajax.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,600;1,400;1,800&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body>
+        <p class="center">Simple blog editor</p>
+        <p class="section-title">Change title of the blog</p>
+             <p>Enter the title for the blog and press the button.</p>
+             <p>The title should not be empty.</p>
+             <form action="ChangeBlogNameServlet">
+             <p class="form">Title: <input type="text" id="blogtitle" name="blogTitle" /></p>
+             <input type="submit" value="Change the title" />
+        </form>
+        <p class="section-title">Add new post</p>
+        <p>To create new post fill the form below and press the button.</p>
+        <form action="AddPostServlet">
+           <p class="form">Index of the topic: <input type="number" id="topicIndex1" name="topicIndex1" value="0" min="0" max="100" required/></p>
+           <p class="form">Title: <input type="text" id="postTitle" name="postTitle" required/> 
+           <p class="form">Text:</p> <textarea id="text" name="text" rows="10" cols="30" required>Enter the text here.</textarea>
+           <p class="form">Filepath: <input type="text" id="filepath" name="filepath" required/></p>
+           <p class="form">Caption: <input type="text" id="caption" name="caption" required /></p>
+           <p class="form">x: <input type="number" id="x" name="x" value="0" min="0" max="400" required/></p>
+           <p class="form">y: <input type="number" id="y" name="y"  value="0" min="0" max="400" required/></p>
+           <p class="form">width: <input type="number" id="width" value="1" name="width" min="1" max="400" required/></p>
+           <p class="form">height: <input type="number" id="height" value="1" name="height" min="1" max="400" required/></p>
+         <input type="submit" value="Create new post" /> 
+        </form>
+        
+     
+        
+        
+        <p class="section-title">Add new topic</p>
+        <p>Enter the title of the topic and press the button below.</p>
+        <form action="AddTopicServlet">
+            <p class="form">Title: <input type="text" id="topicTitle" name="topicTitle" /></p>
+            <input type="submit" value="Create new topic" />
+        </form>
+        <p class="section-title">Remove post</p>
+        <p>Choose the topic and the post to remove. Fill the form below.</p>
+        <p>Press the button to remove the topic.</p>
+        <form action="RemovePostServlet">
+            <p class="form">Index of the topic: <input type="number" id="topicIndex2" name="topicIndex2" value="0" min="0" max="100" required/></p>
+            <p class="form">Index of the post: <input type="number" id="postIndex" name="postIndex" value="0" min="0" max="100" required/></p>
+            <input type="submit" value="Remove post" />
+        </form>
+        <p class="section-title">Remove topic</p>
+        <p>Choose the topic. Fill the form below.</p>
+        <p>Press the button to remove the topic.</p>
+        <form action="RemoveTopicServlet">
+            <p class="form">Index of the topic: <input type="number" required id="topicIndex3" value="0" min="0" max="100" name="topicIndex3"  /></p>
+            <input type="submit" value="Remove topic" />
+        </form>
+        <p class="section-title">Show posts</p>
+        <p>Choose the topic. Fill the form below.</p>
+        <p>Press the button to show posts.</p>
+        <form action="ShowPostServlet">
+            <p class="form">Index of the topic: <input type="number" id="topicindex4" name="topicindex4" value="0" min="0" max="100" required /></p>
+            <input type="submit" value="Show posts" />
+        </form>
+        <p class="section-title">Show topics</p>
+        <p>Press the button to show topics.</p>
+        <form action="ShowAllTopicsServlet" method="post" >
+            <input type="submit" value="Show topics" />
+        </form>
+           <p class="section-title">Rate blog</p>
+        <form action="AddGradeServlet">
+             <p>Add your grade and press rate to rate the blog.</p>
+            <p class="form">Grade value: <input type="number" id="gradeInt" name="gradeInt" min="1" max="5" value="1" required/></p>
+            <input type="submit" value="Rate" />
+        </form>
+           <form action="CookieServlet">
+              <p class="section-title">Cookie example</p>  
+              <p class="form">Click the button to get the cookie</p>
+              <input type="submit" value="I want my cookie!" />
+           </form>   
+        
+        
+    
+    </body>
+</html>

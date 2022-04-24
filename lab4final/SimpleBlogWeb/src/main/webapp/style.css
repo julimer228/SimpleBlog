@@ -1,0 +1,55 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 6 sty 2022, 09:46:47
+    Author     : julia
+*/
+
+p.center{
+    margin:0;
+    padding: 0;
+    font-size: 50px;
+    color: green;
+    text-align: center;
+    font-family: "Libre Baskerville", serif;
+      background: rgba(0,200,0,.3);
+}
+
+p.section-title{
+    font-family: "Source Code Pro", monospace;
+    box-sizing: border-box;
+     color: green;
+    background: rgba(0,200,0,.3);
+    font-size: 30px;
+}
+
+p.form{
+    font-family: "Arial", monospace;
+    box-sizing: border-box;
+    font-size: 20px;
+    
+}
+
+
+p.topics{
+    font-family: "Source Code Pro", monospace;
+    box-sizing: border-box;
+     color: green;
+    background: rgba(0,200,0,.5);
+    font-size: 20px;
+}
+
+*{
+    font-family: "Source Code Pro", monospace;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+label {
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+  padding-right: 10px;
+}
